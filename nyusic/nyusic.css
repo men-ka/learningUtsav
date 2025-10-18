@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+    flex-direction: column;
+    padding: 6vh;
+    background-color: #F497DA;
+}
+
+#mainbod{
+    padding: 4px;
+    height: 60vh;
+    width: 25vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F679E5;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.player{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+.albcover{
+    height:80%;
+    width: 100%;
+    margin: 0px 0px 3px 0px;
+    border: 1px solid #353d3a;
+    border-radius: 8px;
+    background-color: #D7FDF0;
+    box-sizing: border-box;
+}
+.controls{
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    border: 1px solid #424B54;
+    height: 20%;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #D7FDF0;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 8px;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+button img{
+    height: 60px;
+    width: 80px;
+}
+#prevBtn img{
+    height: 40px;
+    width: 40px;
+}
+#nextBtn img{
+    height: 40px;
+    width: 40px;
+}
+button{
+    background: none;
+    border: none;
+}

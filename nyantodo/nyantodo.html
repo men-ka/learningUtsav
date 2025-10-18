@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyan Tasks</title>
+    <link rel="stylesheet" href="d11.css">
+    <link rel="stylesheet" href="d4_todo.css">
+    <!-- for font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <!-- for calendar  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css"> -->
+
+</head>
+<body>
+    <div class="wholeshi">
+        <div id="mode">
+            <label class="cat-toggle">
+            <input type="checkbox" id="darkModeCheckbox" />
+            <span class="slider">
+                <img src="./imgs/cat-white.png" alt="Cat" class="cat-image" />
+            </span>
+            </label>
+        </div>
+    
+    <div class="paw-border-box">
+        <span class="paw paw-top-left"></span>
+        <span class="paw paw-bottom-right"></span>
+        <div class="content">
+                <h1>Nyan Tasks</h1>
+                <!-- container -->
+                <div id="inputcont"> 
+                    <input id="newtask" placeholder="Add a neow task...">
+                    <input id="duedate" type="text" style="display:none;">
+                    <button id="calendar-btn" type="button">
+                    <img src="./imgs/calendar.svg" alt="Choose Date" style="width:32px; height:32px; cursor:pointer;">
+                    </button>
+
+                    <button id="addBtn">Add Task</button>
+                </div>       
+                <ul id="todoList">
+
+                </ul>
+                <div id="delcont">
+                    <button id = "delAll">Delete All</button>
+                </div>  
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
+<!-- script is in d4 -->
+<!-- style is in d11,d4 -->
+<script src="d4_todo.js"></script>

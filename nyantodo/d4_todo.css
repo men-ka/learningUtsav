@@ -1,0 +1,304 @@
+/* for font */
+* {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-image: url('./imgs/all-cats.svg');
+  background-repeat:round;
+  background-size: 500px 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  cursor: url('./imgs/cursor-paw.svg'),auto;
+}
+button{
+  cursor: url('./imgs/cursor-paw-nail.svg') 4 4,auto;
+}
+#nyanTodo {
+  margin: 40px auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  row-gap: 15px;
+  width: 650px;
+  padding: 20px;
+  /* background: #f9f9f9; */
+  background:#ffe8f4 ;
+  border: 1px solid;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #FF69B4;
+  box-shadow: 2px 2px 8px 2px #FFB6C1;
+  position: relative;
+  z-index: 2;
+}
+
+#nyanTodo h1 {
+  text-align: center;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+#newtask {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#addBtn {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #FF69B4;
+  color: white;
+  border-radius: 4px;
+  cursor: url('./imgs/cursor-paw-nail.svg'),auto;
+  width: 20%;
+  min-width: 50px;
+  white-space: nowrap;
+}
+
+#addBtn:hover {
+  background-color: hsl(342, 100%, 66%);
+}
+
+#inputcont {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 10px;
+  align-items: center;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#todoList li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: url('./imgs/cursor-paw-nail.svg'),auto;
+}
+
+#todoList li.completed {
+  text-decoration: line-through;
+  color: #DE3163;
+  opacity: 0.7;
+}
+
+.checkcont {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.todoLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: url('./imgs/cursor-paw-nail.svg'),auto;
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+.todoLabel input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+#calendar-btn{
+  cursor: url('./imgs/cursor-paw-nail.svg') 16 16,auto !important;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-image: url("./imgs/paw-outline-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transition: transform 0.2s ease;
+   background-image: 0.2s ease;
+}
+
+.todoLabel input[type="checkbox"]:checked + .checkmark {
+  background-image: url("./imgs/paw-filled.svg");
+  transform: scale(1.15);
+}
+
+.todoLabel input[type="checkbox"]:not(:checked) + .checkmark {
+  transform: scale(1);
+}
+
+#delAll {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity ease;
+  height: 0px;
+}
+#delAll.visible {
+  opacity: 1;
+  height: 100%;
+  pointer-events: auto;
+  padding: 6px 5px;
+  font-size: 15px;
+  border: none;
+  background-color: #5D2A42;
+  color: white;
+  border-radius: 4px;
+  cursor: url('./imgs/cursor-paw-nail.svg'),auto;
+  width: 20%;
+  white-space: nowrap;
+}
+
+#delAll:hover {
+  background-color: #bd5e8b;
+}
+.wholeshi{
+  display: flex;
+}
+#mode{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+/* for dark mode */
+body.dark-mode {
+  background: #121212;
+  background-image: url('./imgs/all-cats.svg');
+  color: #eee;
+  background-repeat:round;
+  background-size: 500px 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+body.dark-mode .paw-border-box {
+  background: #2c2c2c;
+  box-shadow: 0 1px 3px #444;
+}
+body.dark-mode #new-task{
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #0056b3;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+body.dark-mode input {
+  background-color: #53534c;
+  color: rgb(244, 165, 221);
+}
+/* Dark mode toggle button */
+#modeBtn {
+  cursor: url('./imgs/cursor-paw-nail.svg'),auto;
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+#modeBtn:hover {
+  background: #0056b3;
+}
+
+body.dark-mode .checkmark {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-image: url("./imgs/paw-outline-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transition: transform 0.2s ease;
+   background-image: 0.2s ease;
+}
+
+body.dark-mode .todoLabel input[type="checkbox"]:checked + .checkmark {
+  background-image: url("./imgs/paw-filled-pinky.svg");
+  transform: scale(1.15);
+}
+
+body.dark-mode .todoLabel input[type="checkbox"]:not(:checked) + .checkmark {
+  transform: scale(1);
+}
+body.dark-mode #todoList li.completed {
+  text-decoration: line-through;
+  color: #FF69B4;
+  opacity: 0.7;
+}
+
+/* custom dark mode button */
+.cat-toggle {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 38px;
+}
+.cat-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: url('./imgs/cursor-paw-nail.svg'), auto;
+  background-color: #ccc;
+  border-radius: 34px;
+  border: 1px solid white;
+  width: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.4s;
+}
+.slider .cat-image {
+  position: absolute;
+  height: 34px;
+  width: 34px;
+  top: 2px;
+  left: 2px;
+  transform: scale(1.6); /* 1.5 times bigger */
+  transform-origin: center;
+  border-radius: 50%;
+  transition: transform 0.4s;
+  pointer-events: none; /* so click goes to checkbox */
+}
+.cat-toggle input:checked + .slider {
+  background-color: #333;
+
+}
+.cat-toggle input:checked + .slider .cat-image {
+  transform: translateX(32px) scale(1.6); /* or scale(1.5) if you want bigger after toggle */
+  height: 34px; /* ensure width and height remain same */
+  width: 34px;
+   top: 2px;
+  left: 2px;
+}
+
+.dueDate{
+  color: #bd5e8b;
+}
+body.dark-mode .dueDate{
+  color: #c98cbb;
+}
+

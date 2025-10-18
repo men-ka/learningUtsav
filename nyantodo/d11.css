@@ -1,0 +1,47 @@
+.paw-border-box {
+  position: relative;
+  padding: 30px 30px;
+  border: 2px solid #e6aeca;
+  border-radius: 16px;
+  width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  box-sizing: border-box;
+  /* text-align: center; */
+}
+.paw {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: url('./imgs/paw-filled-pinky.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
+  fill: pink;
+}
+
+.paw-top-left {
+  top: -25px;
+  left: -25px;
+  transform: rotate(-45deg);
+  fill: pink;
+}
+
+.paw-bottom-right {
+  bottom: -20px;
+  right: -25px;
+  transform: rotate(120deg);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  font-size: 1.4rem;
+}
+.content h1{
+  text-align: center;
+}
+#delAll{
+  width: 20%;
+}
